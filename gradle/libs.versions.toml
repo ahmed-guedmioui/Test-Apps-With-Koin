@@ -1,0 +1,102 @@
+[versions]
+agp = "8.5.1"
+kotlin = "1.9.24"
+coreKtx = "1.13.1"
+lifecycleRuntimeKtx = "2.8.4"
+activityCompose = "1.9.1"
+composeBom = "2024.06.00"
+
+koin = "3.5.3"
+
+truth = "1.4.2"
+testCore = "1.6.1"
+coreTesting = "2.2.0"
+uiTestManifest = "1.6.8"
+
+junit = "4.13.2"
+
+extJunit = "1.2.1"
+testCoreKtx = "1.6.1"
+testRunner = "1.6.1"
+kotlinxCoroutinesTest = "1.5.1"
+espressoCore = "3.6.1"
+
+[libraries]
+
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+truth = { module = "com.google.truth:truth", version.ref = "truth" }
+androidx-core = { module = "androidx.test:core", version.ref = "testCore" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+
+koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
+
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "extJunit" }
+androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+core-ktx = { module = "androidx.test:core-ktx", version.ref = "testCoreKtx" }
+androidx-runner = { module = "androidx.test:runner", version.ref = "testRunner" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+
+
+
+ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestManifest" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+
+[bundles]
+koin = [
+    "koin-core",
+    "koin-android",
+    "koin-androidx-compose"
+]
+
+local-tests = [
+    "junit",
+    "truth",
+    "androidx-core",
+    "androidx-core-testing",
+    "kotlinx-coroutines-test",
+    "koin-test-junit4",
+    "koin-test"
+]
+
+instrumented-tests = [
+    "truth",
+    "androidx-junit",
+    "androidx-ui-test-junit4",
+    "androidx-core-testing",
+    "core-ktx",
+    "androidx-runner",
+    "kotlinx-coroutines-test",
+    "androidx-espresso-core",
+    "koin-test-junit4",
+    "koin-test"
+]
+
+
+
+
+
+
+
+
+
+
